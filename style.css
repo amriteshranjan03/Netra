@@ -1,0 +1,131 @@
+
+* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(164, 135, 135);
+  color: blue;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===== TOP BAR ===== */
+.topbar {
+  display: flex;              /* everything in one row */
+  align-items: right;        /* vertically centered */
+}
+
+/* ===== BRAND ===== */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2f80ff, #00d4aa);
+}
+
+.brand h1 {
+  font-size: 18px;
+  letter-spacing: 2px;
+  line-height: 1.1;
+}
+
+.brand p {
+  font-size: 11px;
+  color: #8a99b8;
+}
+
+/* ===== NAV ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navbar a {
+  color: #b8c5de;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar a:hover {
+  background: #1d2b49;
+  color: #fff;
+}
+
+/* ===== RIGHT SIDE (status + clock) ===== */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;          /* pushes this block to the far right */
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #8a99b8;
+}
+
+.online-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  70%  { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+#clock {
+  font-family: "Courier New", monospace;
+  font-size: 15px;
+  color: #fff;
+  background: #0b1220;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid #22304d;
+}
+
+/* ===== DISPATCH BUTTON ===== */
+#dispatch-open {
+  background: #2f80ff;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+#dispatch-open:hover {
+  background: #1f6aeb;
+}
+
+#dispatch-open:active {
+  transform: scale(0.97);
+}
